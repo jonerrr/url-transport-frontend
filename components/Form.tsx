@@ -19,7 +19,7 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const backendUrl = "https://transfer.jonah.sh:8080";
+const backendUrl = "https://transfer.jonah.sh";
 
 export default function Submit() {
   const [url, setUrl] = useState("");
