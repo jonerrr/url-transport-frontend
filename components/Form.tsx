@@ -34,7 +34,10 @@ export default function Submit() {
     fetch(`${backendUrl}/get`)
       .then((response) => response.json())
       .then((data) => {
-        if (data.error) return;
+        if (data.error) {
+          setLoaded(true);
+          return;
+        }
         setCurrentUrl(data.url);
         setLoaded(true);
       });
